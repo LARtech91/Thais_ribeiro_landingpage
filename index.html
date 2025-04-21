@@ -3,353 +3,1293 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Estética Corporal Avançada em São Paulo. Tratamentos personalizados de criolipólise, radiofrequência, enzimas e mais com Thais Ribeiro.">
-    <meta name="keywords" content="estética corporal, criolipólise, radiofrequência, enzimas, tratamento estético, São Paulo">
-    <meta name="author" content="Thais Ribeiro">
-    <meta property="og:title" content="Thais Ribeiro | Estética Corporal Avançada">
-    <meta property="og:description" content="Transforme seu corpo e eleve sua autoestima com tratamentos estéticos avançados. Agende sua avaliação hoje!">
-    <meta property="og:image" content="https://fbnqqxlvcilobufelbvs.supabase.co/storage/v1/object/public/documentos//Ativo%209@2x.png">
-    <meta property="og:url" content="https://thaisribeiro.com.br">
-    <meta name="robots" content="index, follow">
-    
-    <title>Thais Ribeiro | Estética Corporal Avançada</title>
-    
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <meta name="description" content="Thais Ribeiro - Estética Corporal Premium. Tratamentos personalizados para clientes exigentes em São Paulo.">
+    <title>Thais Ribeiro | Estética Corporal Premium</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --rose-gold: #bd8c7d;
+            --rose-gold-light: #d1a193;
+            --gold: #d4af37;
+            --gold-light: #e3cb75;
+            --white: #ffffff;
+            --ice-white: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #adb5bd;
+            --dark-gray: #495057;
+            --black: #212529;
+            
+            --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+            
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-gray);
+            line-height: 1.6;
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+            color: var(--black);
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to right, var(--rose-gold), var(--gold));
+            bottom: -10px;
+            left: 0;
+        }
+        
+        h3 {
+            font-size: 1.8rem;
+            font-weight: 500;
+        }
+        
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .text-center h2::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .section {
+            padding: 5rem 0;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--medium-gray);
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: var(--white);
+            padding: 1rem 0;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        
+        header.scrolled {
+            padding: 0.7rem 0;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--black);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo img {
+            height: 50px;
+            transition: var(--transition);
+        }
+        
+        header.scrolled .logo img {
+            height: 40px;
+        }
+        
+        .logo-text span {
+            display: block;
+            font-size: 0.9rem;
+            color: var(--rose-gold);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style-type: none;
+            gap: 2rem;
+        }
+        
+        .nav-link {
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 0.5rem 0;
+            position: relative;
+            transition: var(--transition);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(to right, var(--rose-gold), var(--gold));
+            transition: var(--transition);
+        }
+        
+        .nav-link:hover {
+            color: var(--rose-gold);
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 25px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+        
+        .menu-toggle span {
+            width: 100%;
+            height: 3px;
+            background-color: var(--dark-gray);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding-top: 8rem;
+            padding-bottom: 5rem;
+            background-color: var(--ice-white);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+        
+        .hero-text {
+            flex: 1;
+        }
+        
+        .hero-image {
+            flex: 1;
+            position: relative;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+        }
+        
+        .hero-image::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--rose-gold-light), var(--gold-light));
+            top: 20px;
+            left: 20px;
+            border-radius: 10px;
+            z-index: -1;
+            opacity: 0.6;
+            transition: var(--transition);
+        }
+        
+        .hero-image:hover img {
+            transform: scale(1.02);
+        }
+        
+        .hero-image:hover::before {
+            top: 15px;
+            left: 15px;
+        }
+        
+        .highlight {
+            color: var(--rose-gold);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .highlight::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 10px;
+            background-color: rgba(209, 161, 147, 0.2);
+            bottom: 5px;
+            left: 0;
+            z-index: -1;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(to right, var(--rose-gold), var(--rose-gold-light));
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(to right, var(--gold), var(--gold-light));
+            transition: var(--transition);
+            z-index: -1;
+        }
+        
+        .btn:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-3px);
+        }
+        
+        .btn:hover::before {
+            width: 100%;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--rose-gold);
+            color: var(--rose-gold);
+        }
+        
+        .btn-outline:hover {
+            color: var(--white);
+            background: var(--rose-gold);
+        }
+        
+        /* About Section */
+        .about {
+            background-color: var(--white);
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+        
+        .about-image {
+            flex: 1;
+            position: relative;
+        }
+        
+        .about-image img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 10px;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .experience-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--gold), var(--rose-gold));
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 600;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+        
+        .experience-badge:hover {
+            transform: scale(1.05) rotate(5deg);
+        }
+        
+        .experience-badge span {
+            font-size: 2.5rem;
+            line-height: 1;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background-color: var(--ice-white);
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            flex: 1 1 200px;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .feature i {
+            color: var(--rose-gold);
+            font-size: 1.5rem;
+        }
+        
+        .feature span {
+            font-weight: 500;
+        }
+        
+        .signature {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--rose-gold);
+            margin-top: 2rem;
+            font-style: italic;
+        }
+        
+        /* Gallery Section */
+        .gallery {
+            background-color: var(--ice-white);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        .gallery-overlay h3 {
+            color: var(--white);
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .gallery-overlay p {
+            color: var(--ice-white);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        /* Services Section */
+        .services {
+            background-color: var(--white);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background-color: var(--ice-white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--rose-gold-light), var(--rose-gold));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2rem auto 1.5rem;
+        }
+        
+        .service-icon i {
+            color: var(--white);
+            font-size: 2rem;
+        }
+        
+        .service-card h3 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .service-description {
+            text-align: center;
+            padding: 0 1.5rem;
+            margin-bottom: 2rem;
+            min-height: 80px;
+        }
+        
+        .service-btn {
+            display: block;
+            text-align: center;
+            padding: 1rem;
+            background-color: var(--rose-gold);
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .service-btn:hover {
+            background-color: var(--gold);
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background-color: var(--ice-white);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonial-decoration {
+            position: absolute;
+            top: -150px;
+            right: -150px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(209, 161, 147, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+        
+        .testimonials-container {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        
+        .testimonial-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-quote {
+            color: var(--rose-gold-light);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial-content {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .author-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        
+        .author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            margin-bottom: 0.2rem;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+        }
+        
+        .author-info p {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--medium-gray);
+        }
+        
+        .rating {
+            color: var(--gold);
+        }
+        
+        .swiper-button-next, .swiper-button-prev {
+            color: var(--rose-gold);
+        }
+        
+        .swiper-pagination-bullet-active {
+            background-color: var(--rose-gold);
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, var(--white), var(--ice-white));
+            padding-bottom: 0;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .contact-item {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--white);
+            border-radius: 10px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        
+        .contact-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--rose-gold-light), var(--rose-gold));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .contact-icon i {
+            color: var(--white);
+            font-size: 1.5rem;
+        }
+        
+        .contact-item h3 {
+            margin-bottom: 1rem;
+        }
+        
+        .contact-item a {
+            color: var(--rose-gold);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .contact-item a:hover {
+            color: var(--gold);
+        }
+        
+        .map-container {
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-gray);
+            color: var(--white);
+            padding: 3rem 0 1.5rem;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-about {
+            max-width: 350px;
+        }
+        
+        .footer-logo {
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-logo img {
+            height: 50px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            transition: var(--transition);
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--rose-gold);
+            transform: translateY(-3px);
+        }
+        
+        .footer-links h3, .footer-contact h3 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: var(--light-gray);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--rose-gold-light);
+            padding-left: 5px;
+        }
+        
+        .contact-info {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            align-items: flex-start;
+        }
+        
+        .contact-info i {
+            color: var(--rose-gold-light);
+            margin-top: 5px;
+        }
+        
+        .footer-bottom {
+            padding-top: 1.5rem;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: var(--light-gray);
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 2rem;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            z-index: 99;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1001;
+            overflow-y: auto;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .modal.show {
+            display: block;
+            opacity: 1;
+        }
+        
+        .modal-content {
+            background-color: var(--white);
+            margin: 5% auto;
+            max-width: 800px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            animation: modalFadeIn 0.5s;
+        }
+        
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.5rem;
+            color: var(--white);
+            cursor: pointer;
+            z-index: 1;
+            transition: var(--transition);
+        }
+        
+        .modal-close:hover {
+            transform: rotate(90deg);
+        }
+        
+        .modal h2 {
+            padding: 1.5rem;
+            margin: 0;
+            background: linear-gradient(135deg, var(--rose-gold), var(--gold));
+            color: var(--white);
+            position: relative;
+        }
+        
+        .modal h2::after {
+            display: none;
+        }
+        
+        .modal-body {
+            padding: 2rem;
+        }
+        
+        .modal-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            h2 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-content, .about-content {
+                flex-direction: column;
+                gap: 3rem;
+            }
+            
+            .hero-image, .about-image {
+                order: -1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .section {
+                padding: 4rem 0;
+            }
+            
+            .menu-toggle {
+                display: flex;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                height: 100vh;
+                background-color: var(--white);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                box-shadow: var(--shadow-lg);
+                transition: var(--transition);
+                z-index: 1000;
+            }
+            
+            .nav-menu.active {
+                right: 0;
+            }
+            
+            body.menu-open {
+                overflow: hidden;
+            }
+            
+            .menu-toggle.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            
+            .menu-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .menu-toggle.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+            
+            .hero-image::before, .about-image::before {
+                top: 10px;
+                left: 10px;
+            }
+            
+            .experience-badge {
+                width: 100px;
+                height: 100px;
+                font-size: 0.9rem;
+                bottom: -15px;
+                right: -15px;
+            }
+            
+            .experience-badge span {
+                font-size: 2rem;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.7rem;
+            }
+            
+            .section {
+                padding: 3rem 0;
+            }
+            
+            .logo-text span {
+                font-size: 0.7rem;
+            }
+            
+            .hero {
+                padding-top: 6rem;
+            }
+            
+            .btn {
+                padding: 0.8rem 1.8rem;
+                font-size: 0.9rem;
+            }
+            
+            .gallery-grid, .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .feature {
+                flex: 1 1 100%;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .modal-content {
+                margin: 10% 5%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
+    <header id="header">
         <div class="container header-container">
-            <a href="#" class="logo-link" aria-label="Página inicial Thais Ribeiro">
-                <img src="https://fbnqqxlvcilobufelbvs.supabase.co/storage/v1/object/public/documentos//Ativo%209@2x.png" alt="Logo Thais Ribeiro" class="logo">
-            </a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#about">Sobre</a></li>
-                    <li><a href="#services">Tratamentos</a></li>
-                    <li><a href="#testimonials">Depoimentos</a></li>
-                    <li><a href="#contact">Contato</a></li>
-                </ul>
-                <button class="mobile-menu-btn" aria-label="Menu de navegação">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <div class="mobile-menu">
-                    <ul>
-                        <li><a href="#home">Início</a></li>
-                        <li><a href="#about">Sobre</a></li>
-                        <li><a href="#services">Tratamentos</a></li>
-                        <li><a href="#testimonials">Depoimentos</a></li>
-                        <li><a href="#contact">Contato</a></li>
-                    </ul>
+            <a href="#" class="logo">
+                <img src="https://fbnqqxlvcilobufelbvs.supabase.co/storage/v1/object/public/documentos//Ativo%209@2x.png" alt="Logo Thais Ribeiro">
+                <div class="logo-text">
+                    <span>Estética Corporal Premium</span>
                 </div>
+            </a>
+            
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link">Início</a></li>
+                    <li><a href="#about" class="nav-link">Sobre</a></li>
+                    <li><a href="#gallery" class="nav-link">Galeria</a></li>
+                    <li><a href="#services" class="nav-link">Tratamentos</a></li>
+                    <li><a href="#testimonials" class="nav-link">Depoimentos</a></li>
+                    <li><a href="#contact" class="nav-link">Contato</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
-    <section class="hero" id="home">
+    <!-- Seção 1: Hero com foto e chamada para ação -->
+    <section class="section hero" id="home">
         <div class="container hero-content">
-            <div class="hero-text">
-                <h1 class="animated-title">Transforme Seu Corpo<br>Eleve Sua <span class="highlight">Autoestima</span></h1>
-                <p>Conheça os tratamentos de estética corporal avançada que transformaram a vida de centenas de mulheres. Entre para a nossa lista de clientes satisfeitas.</p>
-                <a href="#appointment" class="btn btn-primary">
-                    <span>Agende sua Avaliação</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
+            <div class="hero-text fade-in">
+                <h1>Transforme seu corpo,<br>eleve sua <span class="highlight">autoestima</span></h1>
+                <p>Tratamentos estéticos exclusivos desenvolvidos para mulheres que valorizam excelência e resultados. Uma experiência de cuidado personalizado que vai além da estética.</p>
+                <a href="https://wa.me/5535999773579" class="btn">Agendar Avaliação</a>
             </div>
-            <div class="hero-image">
-                <!-- Aqui foi alterada a imagem para a URL fornecida -->
-                <img src="https://fbnqqxlvcilobufelbvs.supabase.co/storage/v1/object/public/documentos//0362102C-AFA4-4658-B498-F054272DA767.png" alt="Thais Ribeiro realizando tratamento de estética corporal avançada" loading="lazy">
-                <div class="image-badge">
-                    <span>+500</span>
-                    <small>Clientes<br>Satisfeitas</small>
-                </div>
+            <div class="hero-image fade-in">
+                <img src="https://fbnqqxlvcilobufelbvs.supabase.co/storage/v1/object/public/documentos//4c281788-ac58-4261-a8c6-ba94d4b97769.jpeg" alt="Thais Ribeiro - Esteticista Premium">
             </div>
         </div>
-        <div class="hero-decoration"></div>
     </section>
-   <section class="about" id="about">
+
+    <!-- Seção 2: Sobre Thais Ribeiro -->
+    <section class="section about" id="about">
         <div class="container">
-            <h2 class="section-title">Sobre Thais Ribeiro</h2>
-            <div class="section-divider"></div>
-            <p class="section-subtitle">Conheça a trajetória e a filosofia por trás do trabalho que tem transformado vidas</p>
+            <h2>Sobre Thais Ribeiro</h2>
+            <p class="section-subtitle">Conheça a profissional que está redefinindo os padrões de excelência em estética corporal avançada</p>
             
             <div class="about-content">
-                <div class="about-image">
-                    <!-- Imagem atualizada conforme solicitado -->
-                    <img src="https://fbnqqxlvcilobufelbvs.supabase.co/storage/v1/object/public/documentos//IMG_1205.jpeg" alt="Thais Ribeiro, especialista em estética" loading="lazy">
+                <div class="about-image fade-in">
+                    <img src="https://fbnqqxlvcilobufelbvs.supabase.co/storage/v1/object/public/documentos//4c281788-ac58-4261-a8c6-ba94d4b97769.jpeg" alt="Thais Ribeiro - Perfil profissional">
                     <div class="experience-badge">
                         <span>10+</span>
                         <small>Anos de<br>Experiência</small>
                     </div>
                 </div>
-                <div class="about-text">
-                    <h3>Uma Jornada de Dedicação à Beleza e ao Bem-estar</h3>
-                    <p>Com mais de 10 anos de experiência em estética corporal avançada, tenho dedicado minha carreira a ajudar mulheres a alcançarem seus objetivos e recuperarem sua autoestima.</p>
-                    <p>Especializada nos mais modernos tratamentos estéticos, minha clínica combina tecnologia de ponta e atendimento personalizado para oferecer resultados extraordinários.</p>
-                    <p>Acredito que cada corpo é único e, por isso, desenvolvo protocolos personalizados que respeitam as necessidades individuais de cada cliente. Minha missão é proporcionar não apenas mudanças físicas, mas também transformações na forma como as mulheres se sentem consigo mesmas.</p>
+                <div class="about-text fade-in">
+                    <h3>Experiência e inovação em cada tratamento</h3>
+                    <p>Com mais de uma década dedicada à estética corporal avançada, desenvolvi protocolos exclusivos que combinam técnicas tradicionais e inovadoras para resultados extraordinários e duradouros.</p>
+                    <p>Minha abordagem personalizada considera a individualidade de cada cliente, adaptando os tratamentos às necessidades específicas e objetivos desejados. Busco não apenas transformar corpos, mas também elevar a autoestima e o bem-estar das mulheres que confiam em meu trabalho.</p>
+                    <p>Comprometo-me com a excelência e atualização constante, trazendo o que há de mais moderno em tecnologia e procedimentos estéticos para o seu atendimento.</p>
+                    
                     <div class="about-features">
-                        <div class="feature">
-                            <i class="fas fa-certificate"></i>
+                        <div class="feature fade-in">
+                            <i class="fas fa-award"></i>
                             <span>Especialista Certificada</span>
                         </div>
-                        <div class="feature">
-                            <i class="fas fa-flask"></i>
-                            <span>Protocolos Exclusivos</span>
+                        <div class="feature fade-in">
+                            <i class="fas fa-gem"></i>
+                            <span>Atendimento Premium</span>
                         </div>
-                        <div class="feature">
-                            <i class="fas fa-user-md"></i>
-                            <span>Atendimento Personalizado</span>
+                        <div class="feature fade-in">
+                            <i class="fas fa-star"></i>
+                            <span>Resultados Comprovados</span>
                         </div>
                     </div>
+                    
                     <div class="signature">Thais Ribeiro</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="services" id="services">
-        <div class="container">
-            <h2 class="section-title">Nossos Tratamentos</h2>
-            <p class="section-subtitle">Conheça os tratamentos exclusivos que têm transformado a vida de nossas clientes</p>
+    <!-- Seção 3: Galeria de Fotos -->
+    <section class="section gallery" id="gallery">
+        <div class="container text-center">
+            <h2>Galeria</h2>
+            <p class="section-subtitle">Conheça nosso espaço e alguns dos resultados alcançados com nossos tratamentos exclusivos</p>
             
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-snowflake"></i>
+            <div class="gallery-grid">
+                <div class="gallery-item fade-in">
+                    <img src="images/gallery-1.jpg" alt="Espaço de tratamento exclusivo">
+                    <div class="gallery-overlay">
+                        <h3>Ambiente Premium</h3>
+                        <p>Espaço cuidadosamente projetado para seu conforto e privacidade</p>
                     </div>
-                    <h3>Criolipólise</h3>
-                    <p class="service-description">Redução de gordura localizada através do congelamento seletivo de células adiposas.</p>
-                    
-                    <div class="service-details">
-                        <div class="service-indications">
-                            <h4>Indicações</h4>
-                            <ul>
-                                <li><i class="fas fa-check"></i> Gordura localizada resistente</li>
-                                <li><i class="fas fa-check"></i> Culotes e flancos</li>
-                                <li><i class="fas fa-check"></i> Abdômen</li>
-                            </ul>
-                        </div>
-                        <div class="service-contraindications">
-                            <h4>Contraindicações</h4>
-                            <ul>
-                                <li><i class="fas fa-times"></i> Gestantes</li>
-                                <li><i class="fas fa-times"></i> Doenças autoimunes</li>
-                                <li><i class="fas fa-times"></i> Herpes ativa</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="service-results">
-                        <h4>Resultados Esperados</h4>
-                        <p>20-30% de redução em 4-12 semanas</p>
-                    </div>
-                    
-                    <a href="#" class="service-btn" data-modal="crio-modal">Saiba mais</a>
                 </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-broadcast-tower"></i>
+                <div class="gallery-item fade-in">
+                    <img src="images/gallery-2.jpg" alt="Resultado de tratamento corporal">
+                    <div class="gallery-overlay">
+                        <h3>Criolipólise</h3>
+                        <p>Resultados após 4 sessões de tratamento</p>
                     </div>
-                    <h3>Radiofrequência</h3>
-                    <p class="service-description">Estimulação do colágeno para melhora da flacidez e textura da pele.</p>
-                    
-                    <div class="service-details">
-                        <div class="service-indications">
-                            <h4>Indicações</h4>
-                            <ul>
-                                <li><i class="fas fa-check"></i> Flacidez cutânea</li>
-                                <li><i class="fas fa-check"></i> Rugas e linhas finas</li>
-                                <li><i class="fas fa-check"></i> Celulite</li>
-                            </ul>
-                        </div>
-                        <div class="service-contraindications">
-                            <h4>Contraindicações</h4>
-                            <ul>
-                                <li><i class="fas fa-times"></i> Gestantes</li>
-                                <li><i class="fas fa-times"></i> Marcapassos</li>
-                                <li><i class="fas fa-times"></i> Implantes metálicos</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="service-results">
-                        <h4>Resultados Esperados</h4>
-                        <p>Melhora visível em 3-6 sessões</p>
-                    </div>
-                    
-                    <a href="#" class="service-btn" data-modal="radio-modal">Saiba mais</a>
                 </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-vial"></i>
+                <div class="gallery-item fade-in">
+                    <img src="images/gallery-3.jpg" alt="Tratamento facial">
+                    <div class="gallery-overlay">
+                        <h3>Radiofrequência</h3>
+                        <p>Rejuvenescimento e firmeza da pele</p>
                     </div>
-                    <h3>Aplicação de Enzimas</h3>
-                    <p class="service-description">Tratamento injetável que degrada células de gordura e melhora o aspecto da celulite.</p>
-                    
-                    <div class="service-details">
-                        <div class="service-indications">
-                            <h4>Indicações</h4>
-                            <ul>
-                                <li><i class="fas fa-check"></i> Gordura localizada</li>
-                                <li><i class="fas fa-check"></i> Celulite</li>
-                                <li><i class="fas fa-check"></i> Melhora do contorno corporal</li>
-                            </ul>
-                        </div>
-                        <div class="service-contraindications">
-                            <h4>Contraindicações</h4>
-                            <ul>
-                                <li><i class="fas fa-times"></i> Gestantes</li>
-                                <li><i class="fas fa-times"></i> Distúrbios de coagulação</li>
-                                <li><i class="fas fa-times"></i> Inflamações locais</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="service-results">
-                        <h4>Resultados Esperados</h4>
-                        <p>Resultados progressivos em 4-8 sessões</p>
-                    </div>
-                    
-                    <a href="#" class="service-btn" data-modal="enzimas-modal">Saiba mais</a>
                 </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-tint"></i>
+                <div class="gallery-item fade-in">
+                    <img src="images/gallery-4.jpg" alt="Drenagem linfática">
+                    <div class="gallery-overlay">
+                        <h3>Drenagem Linfática</h3>
+                        <p>Redução de inchaço e modelagem corporal</p>
                     </div>
-                    <h3>Drenagem Linfática</h3>
-                    <p class="service-description">Massagem terapêutica que estimula o sistema linfático, reduzindo inchaços.</p>
-                    
-                    <div class="service-details">
-                        <div class="service-indications">
-                            <h4>Indicações</h4>
-                            <ul>
-                                <li><i class="fas fa-check"></i> Retenção de líquidos</li>
-                                <li><i class="fas fa-check"></i> Pós-operatório</li>
-                                <li><i class="fas fa-check"></i> Inchaço nas pernas</li>
-                            </ul>
-                        </div>
-                        <div class="service-contraindications">
-                            <h4>Contraindicações</h4>
-                            <ul>
-                                <li><i class="fas fa-times"></i> Infecções agudas</li>
-                                <li><i class="fas fa-times"></i> Trombose recente</li>
-                                <li><i class="fas fa-times"></i> Hipertensão descontrolada</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="service-results">
-                        <h4>Resultados Esperados</h4>
-                        <p>Alívio imediato, resultados em 1-2 sessões</p>
-                    </div>
-                    
-                    <a href="#" class="service-btn" data-modal="drenagem-modal">Saiba mais</a>
                 </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-water"></i>
+                <div class="gallery-item fade-in">
+                    <img src="images/gallery-5.jpg" alt="Massagem relaxante">
+                    <div class="gallery-overlay">
+                        <h3>Massagem Relaxante</h3>
+                        <p>Experiência sensorial completa para corpo e mente</p>
                     </div>
-                    <h3>Hidrolipoclasia</h3>
-                    <p class="service-description">Eliminação de gordura localizada com aplicação de soluções e ultrassom.</p>
-                    
-                    <div class="service-details">
-                        <div class="service-indications">
-                            <h4>Indicações</h4>
-                            <ul>
-                                <li><i class="fas fa-check"></i> Gordura localizada</li>
-                                <li><i class="fas fa-check"></i> Definição de contornos</li>
-                                <li><i class="fas fa-check"></i> Complemento pós-criolipólise</li>
-                            </ul>
-                        </div>
-                        <div class="service-contraindications">
-                            <h4>Contraindicações</h4>
-                            <ul>
-                                <li><i class="fas fa-times"></i> Gestantes</li>
-                                <li><i class="fas fa-times"></i> Diabetes descompensada</li>
-                                <li><i class="fas fa-times"></i> Doenças hepáticas</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="service-results">
-                        <h4>Resultados Esperados</h4>
-                        <p>Reduções visíveis em 2-4 sessões</p>
-                    </div>
-                    
-                    <a href="#" class="service-btn" data-modal="hidro-modal">Saiba mais</a>
                 </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-spa"></i>
+                <div class="gallery-item fade-in">
+                    <img src="images/gallery-6.jpg" alt="Resultado de procedimento estético">
+                    <div class="gallery-overlay">
+                        <h3>Antes e Depois</h3>
+                        <p>Transformação com tratamentos personalizados</p>
                     </div>
-                    <h3>Massagem Relaxante</h3>
-                    <p class="service-description">Técnicas que combinam relaxamento e descontração muscular para bem-estar.</p>
-                    
-                    <div class="service-details">
-                        <div class="service-indications">
-                            <h4>Indicações</h4>
-                            <ul>
-                                <li><i class="fas fa-check"></i> Estresse</li>
-                                <li><i class="fas fa-check"></i> Tensão muscular</li>
-                                <li><i class="fas fa-check"></i> Ansiedade</li>
-                            </ul>
-                        </div>
-                        <div class="service-contraindications">
-                            <h4>Contraindicações</h4>
-                            <ul>
-                                <li><i class="fas fa-times"></i> Febre</li>
-                                <li><i class="fas fa-times"></i> Lesões de pele</li>
-                                <li><i class="fas fa-times"></i> Inflamações agudas</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="service-results">
-                        <h4>Resultados Esperados</h4>
-                        <p>Alívio imediato após cada sessão</p>
-                    </div>
-                    
-                    <a href="#" class="service-btn" data-modal="massagem-modal">Saiba mais</a>
                 </div>
-            </div>
-            
-            <div class="text-center mt-50">
-                <a href="#appointment" class="btn btn-primary">
-                    <span>Agende seu Tratamento</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
             </div>
         </div>
     </section>
 
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <h2 class="section-title">Depoimentos</h2>
-            <p class="section-subtitle">Veja o que nossas clientes estão dizendo sobre a experiência e os resultados</p>
+    <!-- Seção 4: Tratamentos Oferecidos -->
+    <section class="section services" id="services">
+        <div class="container text-center">
+            <h2>Tratamentos Exclusivos</h2>
+            <p class="section-subtitle">Conheça nossa seleção de procedimentos estéticos avançados, desenvolvidos para proporcionar resultados excepcionais</p>
+            
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <h3>Criolipólise</h3>
+                    <p class="service-description">Redução de gordura localizada através do congelamento seletivo de células adiposas, sem cirurgia.</p>
+                    <a href="#" class="service-btn" data-modal="crio-modal">Saiba Mais</a>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-broadcast-tower"></i>
+                    </div>
+                    <h3>Radiofrequência</h3>
+                    <p class="service-description">Tratamento para flacidez da pele, estimulando a produção de colágeno e elastina.</p>
+                    <a href="#" class="service-btn" data-modal="radio-modal">Saiba Mais</a>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <h3>Enzimas</h3>
+                    <p class="service-description">Enzimas lipolíticas aplicadas para redução de gordura localizada e melhora da celulite.</p>
+                    <a href="#" class="service-btn" data-modal="enzimas-modal">Saiba Mais</a>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3>Drenagem Linfática</h3>
+                    <p class="service-description">Massagem que estimula a circulação linfática, eliminando toxinas e reduzindo retenção.</p>
+                    <a href="#" class="service-btn" data-modal="drenagem-modal">Saiba Mais</a>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3>Hidrolipoclasia</h3>
+                    <p class="service-description">Técnica minimamente invasiva para eliminação de gordura localizada com ultrassom.</p>
+                    <a href="#" class="service-btn" data-modal="hidro-modal">Saiba Mais</a>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3>Massagem Relaxante</h3>
+                    <p class="service-description">Combinação de técnicas para alívio do estresse e tensão muscular, promovendo bem-estar.</p>
+                    <a href="#" class="service-btn" data-modal="massagem-modal">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 5: Depoimentos -->
+    <section class="section testimonials" id="testimonials">
+        <div class="testimonial-decoration"></div>
+        <div class="container text-center">
+            <h2>Depoimentos</h2>
+            <p class="section-subtitle">Conheça a experiência de clientes que transformaram seus corpos e elevaram sua autoestima com nossos tratamentos</p>
             
             <div class="testimonials-container">
                 <div class="swiper testimonials-slider">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <div class="testimonial-card">
+                            <div class="testimonial-card fade-in">
                                 <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
                                 <p class="testimonial-content">Os tratamentos da Thais mudaram minha vida! Após três sessões de criolipólise, consegui eliminar aquela gordurinha localizada que me incomodava há anos. O atendimento é impecável e os resultados são surpreendentes!</p>
                                 <div class="testimonial-author">
-                                    <div class="testimonial-author">
                                     <div class="author-image">
-                                        <img src="images/testimonial-1.jpg" alt="Foto de Maria Silva" loading="lazy">
+                                        <img src="images/testimonial-1.jpg" alt="Foto de Maria Silva">
                                     </div>
                                     <div class="author-info">
                                         <h4>Maria Silva</h4>
@@ -367,12 +1307,12 @@
                         </div>
                         
                         <div class="swiper-slide">
-                            <div class="testimonial-card">
+                            <div class="testimonial-card fade-in">
                                 <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
                                 <p class="testimonial-content">Minha autoestima melhorou 100% depois que comecei os tratamentos com a Thais. A combinação de radiofrequência e drenagem linfática reduziu minha flacidez e melhorou muito o aspecto da minha pele. Recomendo demais!</p>
                                 <div class="testimonial-author">
                                     <div class="author-image">
-                                        <img src="images/testimonial-2.jpg" alt="Foto de Ana Paula" loading="lazy">
+                                        <img src="images/testimonial-2.jpg" alt="Foto de Ana Paula">
                                     </div>
                                     <div class="author-info">
                                         <h4>Ana Paula</h4>
@@ -390,12 +1330,12 @@
                         </div>
                         
                         <div class="swiper-slide">
-                            <div class="testimonial-card">
+                            <div class="testimonial-card fade-in">
                                 <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
                                 <p class="testimonial-content">Nunca imaginei que pudesse eliminar a gordura localizada sem cirurgia. Os protocolos personalizados da Thais funcionam de verdade! Além dos resultados, o ambiente da clínica é acolhedor e o atendimento é maravilhoso.</p>
                                 <div class="testimonial-author">
                                     <div class="author-image">
-                                        <img src="images/testimonial-3.jpg" alt="Foto de Carolina Mendes" loading="lazy">
+                                        <img src="images/testimonial-3.jpg" alt="Foto de Carolina Mendes">
                                     </div>
                                     <div class="author-info">
                                         <h4>Carolina Mendes</h4>
@@ -418,33 +1358,16 @@
                 <div class="swiper-button-prev"></div>
             </div>
         </div>
-        <div class="testimonial-decoration"></div>
-    </section>
-    <section class="appointment" id="appointment">
-        <div class="container">
-            <h2 class="section-title">Agende sua Avaliação</h2>
-            <p class="section-subtitle">Dê o primeiro passo para transformar seu corpo e recuperar sua autoestima. Agende agora uma avaliação personalizada e descubra os tratamentos ideais para você.</p>
-            
-            <div class="cta-buttons">
-                <a href="https://wa.me/5535999773579" class="btn btn-primary" aria-label="Agendar pelo WhatsApp">
-                    <i class="fab fa-whatsapp"></i>
-                    <span>Agendar pelo WhatsApp</span>
-                </a>
-                <a href="formulario.html" class="btn btn-outline" aria-label="Preencher Formulário">
-                    <i class="fas fa-clipboard-list"></i>
-                    <span>Preencher Formulário</span>
-                </a>
-            </div>
-        </div>
     </section>
 
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title">Entre em Contato</h2>
-            <p class="section-subtitle">Estamos à disposição para esclarecer suas dúvidas e fornecer mais informações sobre nossos tratamentos</p>
+    <!-- Seção de Contato -->
+    <section class="section contact" id="contact">
+        <div class="container text-center">
+            <h2>Entre em Contato</h2>
+            <p class="section-subtitle">Estou à disposição para esclarecer suas dúvidas e agendar sua avaliação personalizada</p>
             
             <div class="contact-grid">
-                <div class="contact-item">
+                <div class="contact-item fade-in">
                     <div class="contact-icon">
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
@@ -453,7 +1376,7 @@
                     <p>São Paulo, SP - Brasil</p>
                 </div>
                 
-                <div class="contact-item">
+                <div class="contact-item fade-in">
                     <div class="contact-icon">
                         <i class="fas fa-phone-alt"></i>
                     </div>
@@ -461,7 +1384,7 @@
                     <a href="tel:+5535999773579">(35) 99977-3579</a>
                 </div>
                 
-                <div class="contact-item">
+                <div class="contact-item fade-in">
                     <div class="contact-icon">
                         <i class="fas fa-envelope"></i>
                     </div>
@@ -470,18 +1393,19 @@
                 </div>
             </div>
             
-            <div class="map-container">
+            <div class="map-container fade-in">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1968704375335!2d-46.65390258502158!3d-23.56507808468041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMzJzU0LjMiUyA0NsKwMzknMDguOSJX!5e0!3m2!1spt-BR!2sbr!4v1624943535969!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" title="Localização da Clínica Thais Ribeiro"></iframe>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-container">
                 <div class="footer-about">
                     <div class="footer-logo">
-                        <img src="https://fbnqqxlvcilobufelbvs.supabase.co/storage/v1/object/public/documentos//Ativo%209@2x.png" alt="Logo Thais Ribeiro" loading="lazy">
+                        <img src="https://fbnqqxlvcilobufelbvs.supabase.co/storage/v1/object/public/documentos//Ativo%209@2x.png" alt="Logo Thais Ribeiro">
                     </div>
                     <p>Estética corporal avançada com resultados comprovados. Transforme seu corpo e recupere sua autoestima com tratamentos personalizados.</p>
                     <div class="social-icons">
@@ -496,8 +1420,8 @@
                     <ul>
                         <li><a href="#home">Início</a></li>
                         <li><a href="#about">Sobre</a></li>
+                        <li><a href="#gallery">Galeria</a></li>
                         <li><a href="#services">Tratamentos</a></li>
-                        <!-- Removida a referência ao Pós-Procedimento -->
                         <li><a href="#testimonials">Depoimentos</a></li>
                         <li><a href="#contact">Contato</a></li>
                     </ul>
@@ -528,15 +1452,17 @@
             </div>
             
             <div class="footer-bottom">
-                <p>© 2025 Thais Ribeiro Estética Corporal Avançada. Todos os direitos reservados.</p>
+                <p>&copy; 2025 Thais Ribeiro - Estética Corporal Premium. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <a href="#home" class="back-to-top" aria-label="Voltar ao topo">
-        <i class="fas fa-chevron-up"></i>
+    <!-- Botão de WhatsApp flutuante -->
+    <a href="https://wa.me/5535999773579" class="whatsapp-float" target="_blank" aria-label="Agendar pelo WhatsApp">
+        <i class="fab fa-whatsapp"></i>
     </a>
-    <!-- Modais de Tratamentos -->
+
+    <!-- Modais dos Serviços -->
     <div class="modal" id="crio-modal">
         <div class="modal-content">
             <span class="modal-close">&times;</span>
@@ -564,143 +1490,152 @@
         </div>
     </div>
 
-    <div class="modal" id="radio-modal">
-        <div class="modal-content">
-            <span class="modal-close">&times;</span>
-            <h2>Radiofrequência</h2>
-            <div class="modal-body">
-                <img src="images/radio-detail.jpg" alt="Procedimento de Radiofrequência" class="modal-img">
-                <h3>O que é?</h3>
-                <p>A Radiofrequência é um procedimento estético que utiliza ondas eletromagnéticas de alta frequência para aquecer as camadas profundas da pele, estimulando a produção de colágeno e elastina, melhorando a flacidez cutânea e a aparência da celulite.</p>
-                
-                <h3>Como funciona?</h3>
-                <p>As ondas de radiofrequência penetram na pele e aquecem o tecido a uma temperatura controlada de 40-42°C, o que provoca uma contração imediata das fibras de colágeno existentes e estimula os fibroblastos a produzirem novas fibras, resultando em uma pele mais firme e com melhor textura.</p>
-                
-                <h3>Protocolo de Tratamento:</h3>
-                <ul>
-                    <li><strong>Duração da sessão:</strong> 30-60 minutos por área</li>
-                    <li><strong>Número de sessões:</strong> 6-8 sessões com intervalo de 7-15 dias</li>
-                    <li><strong>Resultados visíveis:</strong> Melhora gradual a partir da 3ª sessão</li>
-                    <li><strong>Áreas de aplicação:</strong> Face, pescoço, braços, abdômen, glúteos e coxas</li>
-                </ul>
-                
-                <div class="treatment-note">
-                    <p><strong>Importante:</strong> Para maximizar os resultados, recomendamos manter boa hidratação, usar protetor solar diariamente e seguir com uma alimentação rica em proteínas para auxiliar na formação de novo colágeno.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal" id="enzimas-modal">
-        <div class="modal-content">
-            <span class="modal-close">&times;</span>
-            <h2>Aplicação de Enzimas</h2>
-            <div class="modal-body">
-                <img src="images/enzimas-detail.jpg" alt="Procedimento de Aplicação de Enzimas" class="modal-img">
-                <h3>O que é?</h3>
-                <p>A Aplicação de Enzimas é um tratamento minimamente invasivo que utiliza substâncias injetáveis específicas (enzimas lipolíticas) que atuam na degradação das células de gordura e na melhora do aspecto da celulite.</p>
-                
-                <h3>Como funciona?</h3>
-                <p>As enzimas são aplicadas através de microinjeções nas áreas com acúmulo de gordura localizada. Estas enzimas quebram as membranas das células adiposas, liberando a gordura para ser metabolizada e eliminada naturalmente pelo sistema linfático.</p>
-                
-                <h3>Protocolo de Tratamento:</h3>
-                <ul>
-                    <li><strong>Duração da sessão:</strong> 30-45 minutos por área</li>
-                    <li><strong>Número de sessões:</strong> 4-8 sessões com intervalo de 15 dias</li>
-                    <li><strong>Resultados visíveis:</strong> Redução gradual a partir da 2ª sessão</li>
-                    <li><strong>Áreas de aplicação:</strong> Abdômen, flancos, culotes, papada e gordura localizada</li>
-                </ul>
-                
-                <div class="treatment-note">
-                    <p><strong>Importante:</strong> Após o procedimento, podem ocorrer inchaço e pequenos hematomas, considerados normais e que desaparecem em poucos dias. A drenagem linfática é altamente recomendada para potencializar os resultados.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal" id="drenagem-modal">
-        <div class="modal-content">
-            <span class="modal-close">&times;</span>
-            <h2>Drenagem Linfática</h2>
-            <div class="modal-body">
-                <img src="images/drenagem-detail.jpg" alt="Procedimento de Drenagem Linfática" class="modal-img">
-                <h3>O que é?</h3>
-                <p>A Drenagem Linfática é uma técnica de massagem suave e rítmica que estimula o sistema linfático a trabalhar mais eficientemente, removendo o excesso de líquidos e toxinas do corpo.</p>
-                
-                <h3>Como funciona?</h3>
-                <p>Por meio de movimentos leves, lentos e precisos, seguindo o sentido do fluxo linfático, a massagem auxilia o transporte da linfa até os gânglios linfáticos, onde as toxinas são filtradas antes de retornar à circulação sanguínea.</p>
-                
-                <h3>Benefícios e Indicações:</h3>
-                <ul>
-                    <li><strong>Redução de inchaço e retenção de líquidos</strong></li>
-                    <li><strong>Recuperação pós-cirúrgica:</strong> Essencial em pós-operatórios de cirurgias plásticas</li>
-                    <li><strong>Melhora da celulite:</strong> Auxilia na eliminação de toxinas</li>
-                    <li><strong>Potencialização de outros tratamentos:</strong> Complementa criolipólise, radiofrequência e enzimas</li>
-                </ul>
-                
-                <div class="treatment-note">
-                    <p><strong>Importante:</strong> Para resultados otimizados, recomendamos manter boa hidratação antes e após as sessões. Em casos de pós-operatório, seguimos protocolos específicos adaptados às orientações do cirurgião.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal" id="hidro-modal">
-        <div class="modal-content">
-            <span class="modal-close">&times;</span>
-            <h2>Hidrolipoclasia</h2>
-            <div class="modal-body">
-                <img src="images/hidro-detail.jpg" alt="Procedimento de Hidrolipoclasia" class="modal-img">
-                <h3>O que é?</h3>
-                <p>A Hidrolipoclasia é um procedimento estético minimamente invasivo que combina a infiltração de solução hipotônica na gordura localizada seguida da aplicação de ultrassom, provocando o rompimento das células adiposas.</p>
-                
-                <h3>Como funciona?</h3>
-                <p>Primeiramente, é realizada a infiltração de uma solução aquosa na camada de gordura subcutânea, que incha as células adiposas. Em seguida, o ultrassom é aplicado na área, provocando o fenômeno da cavitação, que rompe as membranas das células de gordura, liberando seu conteúdo para ser eliminado pelo organismo.</p>
-                
-                <h3>Protocolo de Tratamento:</h3>
-                <ul>
-                    <li><strong>Duração da sessão:</strong> 60-90 minutos por área</li>
-                    <li><strong>Número de sessões:</strong> 4-6 sessões com intervalo de 15-21 dias</li>
-                    <li><strong>Resultados visíveis:</strong> Após a 2ª ou 3ª sessão</li>
-                    <li><strong>Áreas de aplicação:</strong> Abdômen, flancos, culotes, braços e costas</li>
-                </ul>
-                
-                <div class="treatment-note">
-                    <p><strong>Importante:</strong> É fundamental seguir todas as recomendações pós-procedimento, como usar a cinta compressiva quando indicado e realizar as sessões de drenagem linfática para maximizar os resultados e reduzir o inchaço.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal" id="massagem-modal">
-        <div class="modal-content">
-            <span class="modal-close">&times;</span>
-            <h2>Massagem Relaxante</h2>
-            <div class="modal-body">
-                <img src="images/massagem-detail.jpg" alt="Procedimento de Massagem Relaxante" class="modal-img">
-                <h3>O que é?</h3>
-                <p>A Massagem Relaxante é uma técnica terapêutica que utiliza movimentos suaves e firmes para aliviar tensões musculares, reduzir o estresse e promover uma sensação de bem-estar geral, combinando benefícios físicos e mentais.</p>
-                
-                <h3>Como funciona?</h3>
-                <p>Através de manobras como deslizamento, amassamento, fricção e percussão, a massagem estimula a circulação sanguínea e linfática, relaxa a musculatura, libera endorfinas (hormônios do bem-estar) e promove um estado de relaxamento profundo.</p>
-                
-                <h3>Benefícios e Indicações:</h3>
-                <ul>
-                    <li><strong>Alívio do estresse e ansiedade</strong></li>
-                    <li><strong>Redução de tensões musculares e dores</strong></li>
-                    <li><strong>Melhora da qualidade do sono</strong></li>
-                    <li><strong>Aumento da sensação de bem-estar</strong></li>
-                    <li><strong>Complemento ideal para tratamentos estéticos</strong></li>
-                </ul>
-                
-                <div class="treatment-note">
-                    <p><strong>Importante:</strong> Cada sessão é personalizada de acordo com as necessidades individuais. Utilizamos óleos essenciais e aromaterapia para potencializar os efeitos relaxantes da massagem, criando uma experiência sensorial completa.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
-    <script src="js/scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Menu Mobile
+            const menuToggle = document.getElementById('menuToggle');
+            const navMenu = document.getElementById('navMenu');
+            const body = document.body;
+            
+            if (menuToggle && navMenu) {
+                menuToggle.addEventListener('click', function() {
+                    menuToggle.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                    body.classList.toggle('menu-open');
+                });
+                
+                // Fechar menu ao clicar em links
+                const navLinks = document.querySelectorAll('.nav-link');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        menuToggle.classList.remove('active');
+                        navMenu.classList.remove('active');
+                        body.classList.remove('menu-open');
+                    });
+                });
+            }
+            
+            // Header fixo ao rolar
+            const header = document.getElementById('header');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+            
+            // Animações de entrada
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+            
+            // Inicializar Swiper
+            if (document.querySelector('.testimonials-slider')) {
+                new Swiper('.testimonials-slider', {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    loop: true,
+                    autoplay: {
+                        delay: 5000,
+                        disableOnInteraction: false
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    speed: 800
+                });
+            }
+            
+            // Modais
+            const modalTriggers = document.querySelectorAll('[data-modal]');
+            const modalCloses = document.querySelectorAll('.modal-close');
+            const modals = document.querySelectorAll('.modal');
+            
+            modalTriggers.forEach(trigger => {
+                trigger.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const modalId = this.getAttribute('data-modal');
+                    const modal = document.getElementById(modalId);
+                    
+                    if (modal) {
+                        modal.classList.add('show');
+                        body.style.overflow = 'hidden';
+                    }
+                });
+            });
+            
+            modalCloses.forEach(close => {
+                close.addEventListener('click', function() {
+                    const modal = this.closest('.modal');
+                    if (modal) {
+                        modal.classList.remove('show');
+                        body.style.overflow = '';
+                    }
+                });
+            });
+            
+            modals.forEach(modal => {
+                modal.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        this.classList.remove('show');
+                        body.style.overflow = '';
+                    }
+                });
+            });
+            
+            // Fechar modal com ESC
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    modals.forEach(modal => {
+                        if (modal.classList.contains('show')) {
+                            modal.classList.remove('show');
+                            body.style.overflow = '';
+                        }
+                    });
+                }
+            });
+            
+            // Smooth Scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
