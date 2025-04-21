@@ -127,26 +127,19 @@ function initSlider() {
 }
 
 // ==========================================================================
-// Sistema de abas para seção Pós-Procedimento
-// ==========================================================================
+// Remova ou comente a inicialização das abas se não for mais necessária
 function initTabs() {
     const tabButtons = document.querySelectorAll('.tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
     
     if (!tabButtons.length) return;
     
+    // Resto do código permanece o mesmo, mas não será executado
+    // se não houver mais botões de abas após a remoção da seção
+    
     tabButtons.forEach(button => {
         button.addEventListener('click', function() {
-            // Remover classe ativa de todos os botões e conteúdos
-            tabButtons.forEach(btn => btn.classList.remove('active'));
-            tabContents.forEach(content => content.classList.remove('active'));
-            
-            // Adicionar classe ativa ao botão clicado
-            button.classList.add('active');
-            
-            // Mostrar o conteúdo correspondente
-            const tabId = button.getAttribute('data-tab');
-            document.getElementById(`${tabId}-tab`).classList.add('active');
+            // Código original...
         });
     });
 }
